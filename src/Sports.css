@@ -1,0 +1,321 @@
+
+* {
+  box-sizing: border-box;
+}
+.sports-banner-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #101713;
+  color: #F0F0E8;
+}
+.sports-banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.sports-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 750px;
+  padding: 60px 8%;
+}
+.sports-label {
+  color: #A8BA96;
+  font-size: 40px;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+.sports-content h1 {
+  color: #F0F0E8;
+  font-size: 70px;
+  line-height: 1.1;
+  margin: 0;
+}
+.sports-content span {
+  color: #A8BA96;
+}
+.sports-content p {
+  color: #A8BA96;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+.sportsbike_container1 {
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 35px;
+  padding: 60px 7%;
+  background: #101713;
+  color: #F0F0E8;
+  overflow: hidden;
+}
+.sportsbike_container1 img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  max-height: 500px;
+  object-fit: contain;
+}
+.sportsbike_container1 h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  line-height: 1.25;
+  margin: 0;
+}
+.sportsbike_container1 span {
+  color: #A8BA96;
+}
+.aprilla_container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: 22px;
+  align-items: stretch;
+  margin: 60px 5%;
+}
+.aprimg2,
+.aprimg1,
+.aprimg3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+.aprimg2 {
+  min-height: 560px;
+}
+.aprilla_container_inside {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  min-width: 0;
+}
+.aprimg1,
+.aprimg3 {
+  min-height: 250px;
+}
+.aprimg2:hover,
+.aprimg1:hover,
+.aprimg3:hover {
+  transform: scale(1.01);
+}
+.perks_sports {
+  color: #A8BA96;
+  text-align: center;
+  font-size: 38px;
+  letter-spacing: 2px;
+  margin: 65px 15px 35px;
+}
+.sports_parts_container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  grid-template-rows: auto auto;
+  gap: 24px;
+  padding: 20px 5% 60px;
+  align-items: stretch;
+}
+.sports_part1,
+.sports_part2,
+.sports_part3 {
+  min-width: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  background: #101713;
+  color: #F0F0E8;
+  border: 1px solid #91A77B;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.sports_part1 {
+  grid-row: span 2;
+}
+.sports_part1 img,
+.sports_part2 img,
+.sports_part3 img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+}
+.sports_part1 img {
+  height: 480px;
+}
+.sports_part_text {
+  padding: 22px 24px 26px;
+  margin-top: 5%;
+}
+.sports_part_text span {
+  color: #A8BA96;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.sports_part_text h1 {
+  color: #F0F0E8;
+  font-size: 27px;
+  line-height: 1.25;
+  margin: 12px 0;
+}
+.sports_part_text p {
+  color: #D8DED2;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+.sports_part1:hover,
+.sports_part2:hover,
+.sports_part3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.22);
+}
+.sports_part1:hover img,
+.sports_part2:hover img,
+.sports_part3:hover img {
+  transform: scale(1.03);
+}
+@media (max-width: 1024px) {
+  .sports_parts_container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 18px;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .sports_part1 img {
+    height: 400px;
+  }
+  .sports_part2 img,
+  .sports_part3 img {
+    height: 250px;
+  }
+  .sports_part_text {
+    padding: 18px;
+  }
+  .sports_part_text h1 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .sports-banner-container {
+    height: 75vh;
+    min-height: 400px;
+  }
+  .sports-content {
+    padding: 30px 6%;
+  }
+  .sports-label {
+    font-size: 32px;
+  }
+  .sports-content h1 {
+    font-size: 42px;
+  }
+  .sports-content p {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .sportsbike_container1 {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 6%;
+    text-align: center;
+  }
+  .sportsbike_container1 img {
+    width: 100%;
+    max-height: 350px;
+  }
+  .sportsbike_container1 h1 {
+    font-size: 30px;
+  }
+  .aprilla_container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 35px 5%;
+  }
+  .aprimg2 {
+    min-height: 0;
+    height: 300px;
+  }
+  .aprilla_container_inside {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .aprimg1,
+  .aprimg3 {
+    height: 180px;
+    min-height: 0;
+  }
+  .perks_sports {
+    font-size: 27px;
+    margin: 40px 12px 25px;
+  }
+  .sports_parts_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 15px 5% 40px;
+  }
+  .sports_part1 {
+    grid-row: auto;
+  }
+  .sports_part1 img,
+  .sports_part2 img,
+  .sports_part3 img {
+    height: 250px;
+  }
+  .sports_part_text {
+    padding: 18px;
+  }
+  .sports_part_text h1 {
+    font-size: 23px;
+  }
+  .sports_part_text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+@media (max-width: 480px) {
+  .sports-content h1 {
+    font-size: 34px;
+  }
+  .sportsbike_container1 h1 {
+    font-size: 26px;
+  }
+  .aprimg2 {
+    height: 240px;
+  }
+  .aprilla_container_inside {
+    grid-template-columns: 1fr;
+  }
+  .aprimg1,
+  .aprimg3 {
+    height: 220px;
+  }
+  .perks_sports {
+    font-size: 23px;
+  }
+  .sports_part1 img,
+  .sports_part2 img,
+  .sports_part3 img {
+    height: 210px;
+  }
+  .sports_part_text h1 {
+    font-size: 21px;
+  }
+}

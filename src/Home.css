@@ -1,0 +1,213 @@
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #101713;
+  color: #F0F0E8;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  margin-top: 15vh;
+  width: 100%;
+  height: 85vh;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+  padding: 80px 8%;
+  margin-top: 5%;
+  background: transparent;
+}
+
+.hero-label {
+  color: #A8BA96;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+
+.hero-content h1 {
+  font-size: clamp(44px, 6.5vw, 88px);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.hero-content h1 span {
+  color: #A8BA96;
+}
+
+.hero-description {
+  max-width: 460px;
+  color: #D0D6CC;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 22px;
+  background: #91A77B;
+  color: #101713;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.hero-button:hover {
+  background: #A8BA96;
+}
+
+.hero-button span {
+  font-size: 20px;
+}
+.home-intro{
+    background-color: #101713;
+    color: white;
+    text-align: center;
+    font-family: 'oswald',sans-serif;
+    padding-top: 5%;
+}
+.home-intro h1{
+  font-size: 70px;
+}
+.home-intro h2{
+    margin-top: 200px;
+    padding-bottom: 100px;
+}
+.ventspan{
+    color: #A8BA96;
+}
+/* .home-bike-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #101713;
+    padding-left: 3%;
+    padding-bottom: 5%;
+}
+.home-bike-img img{
+    height: 600px;
+} */
+/* .biker-img{
+    position: absolute;
+}
+.biker-img p{
+    position: relative;
+} */
+
+.home-bike-img {
+  display: flex;
+  gap: 25px;
+  background-color: #101713;
+  padding: 5%;
+}
+
+.bike-card {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.biker-img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  border-radius: 10px;
+}
+
+.bike-card p {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 25px 15px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.bike-card:hover p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.bike-card:hover .biker-img {
+  transform: scale(1.05);
+}
+.home-text-img{
+    display: flex;
+    background-color: #101713;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.home-text-img img{
+    width: 700px;
+    border-radius:70px;
+    padding-right: 20px;
+}
+.home-text-img h1{
+    text-align: center;
+    color: white;
+    font-family: 'barlow condensed',sans-serif;
+    margin-right: 3%;
+}
+.reach-btn{
+    background-color: #91A77B;
+    padding: 2%;
+    border: none;
+    color: #101713;
+    border-radius: 5px;
+    margin: 40px auto;
+    display: block;
+    transition: all o.4s ease-in;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 550px;
+  }
+  .home-text-img{
+    display: flex;
+    flex-direction: column-reverse;
+    /* margin-top: 5%; */
+    gap: 5%;
+  }
+  .home-text-img img{
+    width: 500px;
+    height: 500px;
+  }
+  .home-text-img-block h1{
+    font-size: larger;
+  }
+  .hero-content {
+    padding: 60px 7%;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+}

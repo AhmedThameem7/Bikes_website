@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+.roadster-banner-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #101713;
+  color: #F0F0E8;
+}
+.roadster-banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.roadster-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 750px;
+  padding: 60px 8%;
+}
+.roadster-label {
+  color: #A8BA96;
+  font-size: 40px;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+.roadster-content h1 {
+  color: #F0F0E8;
+  font-size: 70px;
+  line-height: 1.1;
+  margin: 0;
+}
+.roadster-content span {
+  color: rgb(250, 24, 24);
+}
+.roadster-content p {
+  color: #A8BA96;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+.history {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 5%;
+  position: relative;
+  overflow: hidden;
+}
+.history img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  z-index: 1;
+}
+.history p {
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px 0 0;
+  text-align: center;
+  font-size: 24px;
+  color: #101713;
+  z-index: 1;
+  line-height: 1.6;
+}
+.roadster-polygon {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  max-width: 90%;
+  background: #91A77B;
+  clip-path: polygon(50% 0%, 78% 8%, 96% 20%, 93% 55%, 82% 75%, 50% 100%, 18% 75%, 7% 55%, 4% 20%, 22% 8%);
+  z-index: 0;
+  pointer-events: none;
+}
+.road_show {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  width: 100%;
+  padding: 30px 3%;
+}
+.road_img1,
+.road_img2 {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.road_img1 img,
+.road_img2 img {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in;
+}
+.road_img1 img:hover,
+.road_img2 img:hover {
+  transform: scale(1.02);
+}
+.road_img1 h2,
+.road_img2 h2 {
+  position: absolute;
+  z-index: 1;
+  bottom: 15px;
+  left: 20px;
+  right: 20px;
+  color: #F0F0E8;
+  margin: 0;
+}
+.road_img2 h2 {
+  text-align: right;
+}
+.road_img3 {
+  display: block;
+  width: 94%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  margin: 20px 3% 5%;
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+}
+.road_img3:hover {
+  transform: scale(1.01);
+}
+.perks_roadster {
+  color: #A8BA96;
+  text-align: center;
+  font-size: 42px;
+  margin: 50px 15px 35px;
+  letter-spacing: 1px;
+}
+.roadster_parts_container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 25px 4%;
+  align-items: stretch;
+}
+.road_part1,
+.road_part2,
+.road_part3 {
+  width: 100%;
+  min-width: 0;
+  text-align: left;
+  padding: 0 0 22px;
+  background: #101713;
+  border: 1px solid #91A77B;
+  color: #F0F0E8;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.road_part1 img,
+.road_part2 img,
+.road_part3 img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  filter: brightness(1);
+  transition: transform 0.4s ease;
+}
+.road_part1:hover img,
+.road_part2:hover img,
+.road_part3:hover img {
+  transform: scale(1.03);
+}
+.road_part1 h1,
+.road_part2 h1,
+.road_part3 h1 {
+  color: #A8BA96;
+  font-size: 25px;
+  margin: 0 18px 12px;
+}
+.road_part1 p,
+.road_part2 p,
+.road_part3 p {
+  color: #F0F0E8;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 18px;
+}
+.road_part1:hover,
+.road_part2:hover,
+.road_part3:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .roadster-banner-container {
+    height: 75vh;
+    min-height: 400px;
+  }
+  .roadster-content {
+    padding: 30px 6%;
+  }
+  .roadster-label {
+    font-size: 32px;
+  }
+  .roadster-content h1 {
+    font-size: 42px;
+  }
+  .roadster-content p {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .history {
+    padding: 35px 5%;
+  }
+  .history img {
+    width: 100%;
+    max-width: 350px;
+  }
+  .history p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .roadster-polygon {
+    width: 320px;
+    height: 320px;
+  }
+  .road_show {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 5%;
+  }
+  .road_img1 img,
+  .road_img2 img {
+    height: 300px;
+  }
+  .road_img1 h2,
+  .road_img2 h2 {
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    font-size: 22px;
+  }
+  .road_img3 {
+    width: 90%;
+    max-height: 350px;
+    margin: 15px 5% 35px;
+    border-radius: 12px;
+  }
+  .perks_roadster {
+    font-size: 30px;
+    margin: 30px 10px;
+  }
+  .roadster_parts_container {
+    grid-template-columns: 1fr;
+    padding: 20px 5%;
+    gap: 22px;
+  }
+  .road_part1 img,
+  .road_part2 img,
+  .road_part3 img {
+    height: 240px;
+  }
+  .road_part1 h1,
+  .road_part2 h1,
+  .road_part3 h1 {
+    font-size: 24px;
+  }
+}

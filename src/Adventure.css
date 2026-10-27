@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+}
+.adventure-banner-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #101713;
+  color: #F0F0E8;
+}
+.adv-banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.adv-content {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+  padding: 60px 8%;
+}
+.adv-label {
+  color: #A8BA96;
+  font-size: 40px;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+.adv-content p {
+  color: #A8BA96;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+.shape-container {
+  position: relative;
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 3%;
+  overflow: hidden;
+}
+.adv-bike-feature {
+  position: relative;
+  min-height: 450px;
+}
+.shape-container h1 {
+  color: #7a995b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'orbitron', sans-serif;
+  font-size: 45px;
+}
+.polygon-shape {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 45%;
+  height: 90%;
+  background: #A8BA96;
+  clip-path: polygon(0 0, 62% 0, 100% 100%, 0 100%);
+}
+.bike-imgadv {
+  position: absolute;
+  top: 100px;
+  left: 10%;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+}
+.advbike2container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.advbikeimg2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.advbike2container h1 {
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  right: 7%;
+  color: #F0F0E8;
+  font-family: 'barlow condensed', sans-serif;
+  font-size: 60px;
+  margin: 0;
+}
+.adv-bike-container {
+  width: 100%;
+  padding: 40px 6%;
+}
+.adv-bike-img {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+}
+.adv-bike-card {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 500px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.adv-biker-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  border-radius: 10px;
+}
+.adv-bike-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.adv-bike-overlay p {
+  color: #F0F0E8;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  transform: translateY(25px);
+  transition: transform 0.4s ease;
+}
+.adv-bike-card:hover .adv-bike-overlay {
+  opacity: 1;
+}
+.adv-bike-card:hover .adv-bike-overlay p {
+  transform: translateY(0);
+}
+.adv-bike-card:hover .adv-biker-img {
+  transform: scale(1.05);
+}
+.perks {
+  color: #A8BA96;
+  text-align: center;
+  margin: 25px 10px;
+}
+.adventure_parts_container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px 4%;
+}
+.adv_part1,
+.adv_part2,
+.adv_part3 {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+  border: 1px solid grey;
+  padding: 10px;
+  background-color: #c0c9b891;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.adv_part1 img,
+.adv_part2 img,
+.adv_part3 img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 4%;
+  border-radius: 5px;
+}
+.adv_part1:hover,
+.adv_part2:hover,
+.adv_part3:hover {
+  transform: translateY(-6px);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+}
+.adv_part1 h1,
+.adv_part2 h1,
+.adv_part3 h1 {
+  font-size: 25px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.adv_part1 p,
+.adv_part2 p,
+.adv_part3 p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .adventure-banner-container {
+    height: 75vh;
+    min-height: 400px;
+  }
+  .adv-content {
+    padding: 30px 6%;
+  }
+  .adv-label {
+    font-size: 32px;
+  }
+  .adv-content p {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .shape-container {
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 0;
+    padding: 25px 15px;
+    gap: 10px;
+  }
+  .adv-bike-feature {
+    width: 100%;
+    min-height: 300px;
+  }
+  .shape-container h1 {
+    font-size: 28px;
+    text-align: center;
+    margin: 15px 0;
+  }
+  .polygon-shape {
+    width: 180px;
+    height: 280px;
+  }
+  .bike-imgadv {
+    top: 40px;
+    left: 8%;
+    width: 90%;
+    max-width: 400px;
+  }
+  .advbike2container {
+    height: 65vh;
+    min-height: 350px;
+  }
+  .advbike2container h1 {
+    top: auto;
+    bottom: 25px;
+    right: 5%;
+    font-size: 32px;
+  }
+  .adv-bike-container {
+    padding: 25px 5%;
+  }
+  .adv-bike-img {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .adv-bike-card {
+    flex: auto;
+    height: 350px;
+  }
+  .adv-bike-overlay {
+    padding: 20px;
+    opacity: 1;
+  }
+  .adv-bike-overlay p {
+    font-size: 25px;
+    transform: translateY(0);
+  }
+  .adventure_parts_container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 5%;
+  }
+  .adv_part1 img,
+  .adv_part2 img,
+  .adv_part3 img {
+    height: 220px;
+  }
+  .adv_part1 h1,
+  .adv_part2 h1,
+  .adv_part3 h1 {
+    font-size: 24px;
+  }
+}
